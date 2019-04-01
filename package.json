@@ -17,7 +17,7 @@
     "url": "https://github.com/evanplaice/ng2-markdown/issues"
   },
   "scripts": {
-    "build": "webpack && webpack --config webpack.min.js",
+    "build": "webpack && webpack --config webpack.prod.js",
     "preversion": "npm run build && git add -A dist",
     "version": "git push",
     "postversion": "git push --tags",
@@ -28,10 +28,6 @@
     "showdown": "^1.8.5"
   },
   "devDependencies": {
-    "@angular/common": "^4.4.6",
-    "@angular/core": "^4.4.6",
-    "@angular/http": "^4.4.6",
-    "@angular/platform-browser": "^4.4.6",
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -40,12 +36,13 @@
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.5.5",
     "uglifyjs-webpack-plugin": "^1.1.4",
-    "webpack": "^3.10.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
     "webpack-merge": "^4.1.1",
     "zone.js": "^0.8.18"
   },
   "peerDependencies": {
-    "@angular/core": "^4.4.6",
-    "@angular/http": "^4.4.6"
+    "@angular/core": "^6",
+    "@angular/http": "^6"
   }
 }

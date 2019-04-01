@@ -1,8 +1,11 @@
 const path = require('path');
 
 module.exports = {
-
-  entry: './src/ng2-markdown.js',
+  mode: 'development',
+  entry: {
+    'ng2-markdown': './src/ng2-markdown',
+    'ng2-markdown.module': './src/ng2-markdown.module'
+  },
   devtool: 'source-map',
   module: {
     rules: [
@@ -22,11 +25,11 @@ module.exports = {
   },
   externals: {
     "@angular/core": '@angular/core',
-    "@angular/http": '@angular/http'
+    "@angular/common/http": '@angular/common/http'
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: 'ng2-markdown.js',
+    filename: '[name].js',
     libraryTarget: 'umd'
   }
 };

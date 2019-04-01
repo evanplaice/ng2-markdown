@@ -91,7 +91,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/ng2-markdown.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/ng2-markdown.module.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -6359,6 +6359,41 @@ var MarkdownComponent = exports.MarkdownComponent = (_dec = (0, _core.Component)
 
 /***/ }),
 
+/***/ "./src/ng2-markdown.module.js":
+/*!************************************!*\
+  !*** ./src/ng2-markdown.module.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.MarkdownModule = undefined;
+
+var _dec, _class;
+
+var _core = __webpack_require__(/*! @angular/core */ "@angular/core");
+
+var _http = __webpack_require__(/*! @angular/common/http */ "@angular/common/http");
+
+var _ng2Markdown = __webpack_require__(/*! ./ng2-markdown */ "./src/ng2-markdown.js");
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MarkdownModule = exports.MarkdownModule = (_dec = (0, _core.NgModule)({
+	imports: [_http.HttpClientModule],
+	exports: [_ng2Markdown.MarkdownComponent],
+	declarations: [_ng2Markdown.MarkdownComponent]
+}), _dec(_class = function MarkdownModule() {
+	_classCallCheck(this, MarkdownModule);
+}) || _class);
+
+/***/ }),
+
 /***/ "@angular/common/http":
 /*!***************************************!*\
   !*** external "@angular/common/http" ***!
@@ -6383,4 +6418,4 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__angular_core__;
 
 /******/ });
 });
-//# sourceMappingURL=ng2-markdown.js.map
+//# sourceMappingURL=ng2-markdown.module.js.map

@@ -1,5 +1,5 @@
-import { NgModule, Component, Inject, ElementRef } from '@angular/core';
-import { HttpModule, Http } from '@angular/http';
+import { Component, Inject, ElementRef } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Converter } from 'showdown';
 import 'prismjs';
 
@@ -9,7 +9,7 @@ import 'prismjs';
   template: ''
 })
 export class MarkdownComponent {
-  constructor (@Inject(ElementRef) elementRef, @Inject(Http) http) {
+  constructor (@Inject(ElementRef) elementRef, @Inject(HttpClient) http) {
     // used for http requests
     this.http = http;
     // reference to the DOM element
@@ -39,9 +39,9 @@ export class MarkdownComponent {
   }
 
   fromFile(src) {
-    this.http.get(src).toPromise()
+    this.http.get(src, { responseType: 'text' }).toPromise()
     .then((res) => {
-       return this.prepare(res._body);
+       return this.prepare(res);
     })
     .then((markdown) => {
       return this.process(markdown);
