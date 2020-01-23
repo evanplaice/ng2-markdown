@@ -1,3 +1,7 @@
+<strong><p align="center">NOTICE: This package is officially deprecated. Use <a href="https://github.com/evanplaice/ng2-markdown">@vanillawc/wc-markdown</a> instead</p></strong>
+
+-----
+
 # &lt;ng2-markdown&gt;
 
 A Markdown component for **Angular2+** with fully themable syntax highlighting.

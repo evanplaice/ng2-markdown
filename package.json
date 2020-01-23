@@ -1,6 +1,6 @@
 {
   "name": "ng2-markdown",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "<ng2-markdown> - Angular2 Markdown Web Component with PrismJS syntax highlighting",
   "author": "Evan Plaice",
   "license": "MIT",
